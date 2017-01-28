@@ -1,0 +1,20 @@
+﻿@{
+    Layout = "/Views/Templates/HTML.cshtml";
+}
+
+@section head {
+    @Html.Partial("GoogleTagManagerHead")
+    @RenderSection("head", false)
+    @Styles.Render(StylesConfig.ThirdPartyStyles)
+    @Styles.Render(StylesConfig.MasterStyles)
+    @RenderSection("styles", false)
+}
+
+@section body {
+    @Html.Partial("GoogleTagManagerBody")
+
+    @RenderSection("body", false)
+
+    @Scripts.Render(ScriptsConfig.MasterScripts)
+    @RenderSection("scripts", false)
+}

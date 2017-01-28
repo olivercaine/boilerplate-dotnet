@@ -1,0 +1,37 @@
+== added less bundling ==
+
+  added BundleTransformer and JavaScriptEngineSwitcherMSEI nuget packages
+  added following to web.config configuration>bundleTransformer:
+	<less useNativeMinification="false" ieCompat="true" strictMath="false" strictUnits="false" dumpLineNumbers="Comments" javascriptEnabled="true" globalVariables="" modifyVariables="">
+      <jsEngine name="MsieJsEngine" />
+    </less>
+
+=== upgrade to mvc4 ===
+
+  update in web config:
+
+  System.Web.Mvc, Version=4.0.0.0
+  System.Web.WebPages, Version=2.0.0.0
+  System.Web.Helpers, Version=2.0.0.0
+
+  remove or update to 2.0 (in app settings):
+  <add key="webpages:Version" value="1.0.0.0" />
+
+  also add 
+  <add assembly="System.Web.WebPages.Razor, Version=2.0.0.0"/>
+  to same section
+
+  in web.ui add nuget reference to asp.net mvc 4  (auto removes dll references to mvc 3)
+
+  add bundling libs using nuget:
+  Install-Package Microsoft.AspNet.Web.Optimization:
+  <add namespace="System.Web.Optimization"/>
+
+  delete ocaine.lib references and use nuget instead
+
+  how to including bundling:
+  http://theshravan.net/bundling-and-minification-support-in-asp-net-mvc-4/
+
+
+
+

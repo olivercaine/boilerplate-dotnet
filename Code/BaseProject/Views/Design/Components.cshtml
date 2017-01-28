@@ -1,0 +1,35 @@
+﻿@{
+    Layout = "~/Views/Templates/Design.cshtml";
+    ViewBag.Title += "Components - Design System";
+}
+
+@section header {
+    <h3>Components</h3>
+    <p>Components, known as Molecules in Atomic Design, contain the user interface patterns that fall on the moderately complex side of the spectrum. Design patterns for search fields, data tables, and range pickers are examples of items one would find in Components. We chose the name ‘Components’ because it is typical vernacular found in most design systems. We anticipate that Components will be one of the most heavily used levels in the hierarchy for designers and developers alike and we wanted to choose a familiar term for them to gravitate towards.</p>
+}
+
+@section body {
+    <div class="col-md-3">
+        <h3>Sections</h3>
+        <ul>
+            <li>
+                <a href="#phone-advert">Phone Advert</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="col-md-9">
+        <section id="phone-advert">
+            <h4>Phone Advert</h4>
+            <p><a href="@Url.Action("phoneadvert", "shared")">@Url.Action("phoneadvert", "shared")</a></p>
+
+            <h5>Examples</h5>
+            <h6>Default</h6>
+            @{ Html.RenderAction("PhoneAdvert", "Shared", new { View = "PhoneAdvert", ViewModel = new PhoneAdvertViewModel() }); }
+
+            <h6>Without buy button</h6>
+            @{ Html.RenderAction("PhoneAdvert", "Shared", new { View = "PhoneAdvert", ViewModel = new PhoneAdvertViewModel { HasBuyBtn = false } }); }
+
+        </section>
+    </div>
+}

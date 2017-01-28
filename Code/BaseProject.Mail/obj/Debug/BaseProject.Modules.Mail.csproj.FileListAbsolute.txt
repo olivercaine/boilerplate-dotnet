@@ -1,0 +1,8 @@
+E:\Code\BaseProject-Master\Code\BaseProject.Mail\bin\Debug\BaseProject.Modules.Mail.dll
+E:\Code\BaseProject-Master\Code\BaseProject.Mail\bin\Debug\BaseProject.Modules.Mail.pdb
+E:\Code\BaseProject-Master\Code\BaseProject.Mail\obj\Debug\BaseProject.Modules.Mail.dll
+E:\Code\BaseProject-Master\Code\BaseProject.Mail\obj\Debug\BaseProject.Modules.Mail.pdb
+E:\Code\BaseProject\Code\BaseProject.Mail\bin\Debug\BaseProject.Modules.Mail.dll
+E:\Code\BaseProject\Code\BaseProject.Mail\bin\Debug\BaseProject.Modules.Mail.pdb
+E:\Code\BaseProject\Code\BaseProject.Mail\obj\Debug\BaseProject.Modules.Mail.dll
+E:\Code\BaseProject\Code\BaseProject.Mail\obj\Debug\BaseProject.Modules.Mail.pdb

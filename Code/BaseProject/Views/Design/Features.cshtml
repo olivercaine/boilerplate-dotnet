@@ -1,0 +1,29 @@
+﻿@{
+    Layout = "~/Views/Templates/Design.cshtml";
+    ViewBag.Title += "Features - Design System";
+}
+
+@section header {
+    <h3>Features</h3>
+    <p>Features are the interfaces that, when working together, allow users to accomplish a task or solve a problem. As collections of capabilities that provide value to your users and customers, Features don’t necessarily have to be sexy. A feature to manage user accounts and permissions will never grab headlines, but it is incredibly important to the success of many enterprise applications. It is also something that should be consistent and reusable across a company’s various application offerings.</p>
+    <p>In some ways Features are akin to Pages in Atomic Design. In fact the transition from Pages to Features was the last change we enacted. The reason behind this change was the realization that in enterprise software a single interface very rarely completes one user story. Focusing on a feature instead of a singular page allows us to provide more context as to how and why a user of an application navigates from screen to screen to accomplish a task.</p>
+}
+
+@section body {
+    <div class="col-md-3">
+        <h3>Sections</h3>
+        <ul>
+            <li>
+                <a href="#onboarding">Onboarding</a>
+            </li>
+
+        </ul>
+    </div>
+
+    <div class="col-md-9">
+        <section id="onboarding">
+            <h4>Onboarding</h4>
+            <p>For example</p>
+        </section>
+    </div>
+}

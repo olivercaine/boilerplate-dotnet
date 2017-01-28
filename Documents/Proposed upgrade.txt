@@ -1,0 +1,22 @@
+Frontend
+	Angular
+	Responsive CSS
+	Design system
+	Offline first
+
+Backend
+	SASS
+	NodeJs		
+	API
+	DB migrations?
+	ORM?
+
+Datastore
+	MondoDB
+
+Hosting
+	Docker?
+
+Accessibility
+	Web URL
+	Windows and Mac installers

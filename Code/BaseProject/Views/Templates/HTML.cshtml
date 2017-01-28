@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>@ViewBag.Title - @ConfigurationManager.AppSettings["AppName"]</title>
+    <link href="/Graphics/favicon.ico" rel="shortcut icon" type="image/ico" />
+    <link href="/Graphics/app-icon.png" rel="icon" sizes="192x192">
+    <link href="/Graphics/app-icon.png" rel="apple-touch-icon">    
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="@ViewBag.Description" name="description" />
+    <meta content="@ViewBag.Keywords" name="keywords"/>
+    <meta content="yes" name="mobile-web-app-capable">
+    @RenderSection("head", false)
+</head>
+<body>
+    @RenderSection("body", false)
+</body>
+</html>

@@ -1,0 +1,10 @@
+﻿@model PhoneAdvertViewModel
+
+<div class="phone-advert">
+    <i ng-bind="viewmodel.Title">@Model.Phone.Title</i>
+    <p ng-bind="viewmodel.Html">@Html.Raw(Model.Phone.Html)</p>
+    @if (Model.HasBuyBtn)
+    {
+        <button class="large">Buy</button>
+    }
+</div>

@@ -1,0 +1,86 @@
+﻿@{
+    Layout = "/Views/Templates/Master.cshtml";
+    ViewBag.Title = "Development";
+    ViewBag.Description = "Development guidelines";
+}
+
+@section body {
+    <h1><a href="/" target="_self">@ConfigurationManager.AppSettings["AppName"]</a></h1>
+    <h2>Development Standards</h2>
+
+    <div class="col-md-3">
+        <h3>Sections</h3>
+        <ul>
+            <li>
+                <a href="#html">HTML</a>
+            </li>
+            <li>
+                <a href="#css">CSS</a>
+            </li>
+            <li>
+                <a href="#javascript">JavaScript</a>
+            </li>
+            <li>
+                <a href="#naming-conventions">Naming conventions</a>
+            </li>
+            <li>
+                <a href="#components">Components</a>
+            </li>
+            <li>
+                <a href="#comments">Comments</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="col-md-9">
+        <section id="html">
+            <h4>HTML</h4>
+            <ol>
+                <li>All image tags should include the alt attribute.</li>
+                <li>All anchor tags should include the title attribute.</li>
+            </ol>
+        </section>
+
+        <section id="css">
+            <h4>CSS</h4>
+            <ol>
+                @*<li>Style naming conventions should follow the <a href="https://www.smashingmagazine.com/2012/04/a-new-front-end-methodology-bem/" target="_blank">BEM methodology</a>.</li>*@
+                <li>Styles are split into 2 bundles; one which contains all third-party styles and one which contains custom project styles.</li>
+                <li>CSS properties should be listed in alphabetical order.</li>
+            </ol>
+        </section>
+
+        <section id="javascript">
+            <h4>JavaScript</h4>
+            <ol>
+                <li>All libraries should be modular and able to included into the site without causing any conflicts or unexpected behaviour.</li>
+                <li>Code should follow the same format as what is defined in the <a href="https://bitbucket.org/olliecaine/texteditorfiles/src/2829e1422dd6?at=master" target="_blank">texteditorfiles repo</a>.</li>
+
+            </ol>
+        </section>
+
+        <section id="naming-conventions">
+            <h4>Naming conventions</h4>
+            <ol>
+                <li>All filenames should be CamelCase.</li>
+                <li>Function names should be descriptive but as concise and succinct as possible. Should know what the function does without having to read the function's contents.</li>
+                <li>Unit test names should be in the format <b>UnitOfWork_StateUnderTest_ExpectedBehavior</b>.</li>
+            </ol>
+        </section>
+
+        <section id="components">
+            <h4>Components</h4>
+            <ol>
+                <li>Shared HTML components should live in /shared/[ComponentName] and must accept a C# view model.</li>
+                <li>The related stylesheet should live in /Styles/Components/[ComponentName].less.</li>
+            </ol>
+        </section>
+
+        <section id="comments">
+            <h4>Comments</h4>
+            <ol>
+                <li>Don't use comments unless they're absolutely necessary.</li>
+            </ol>
+        </section>
+    </div>
+}

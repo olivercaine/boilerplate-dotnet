@@ -1,0 +1,33 @@
+Process
+	Development
+		Delete database then run app to create database and run migrations. Seed won't run.
+		Run 'update-database' in Package Manager Console to execute seed.
+	Production
+		
+Code
+	Don't set AutomaticMigrationsEnabled property (default is false) because setting it to true stops migration scripts being used which is bad because you can't roll back or see what's been ran on the database.
+
+Initiators
+
+	CreateDatabaseIfNotExists
+		This is the default database initializer class used by Code First unless you specify some other class. As the name suggests,
+ 		the CreateDatabaseIfNotExists class creates a database only if it doesn't exist. This initializer also comes in handy when you
+ 		wish to avoid any accidental deletion of the database.
+
+	DropCreateDatabaseWhenModelChanges
+		This database initializer creates a database if it doesn't exist already. Additionally, if a database is already present 
+		but there is a mismatch between the model classes and table schema then it deletes the database and re-creates it. You will 
+		find this more useful during development and testing when models are changing often.
+
+	DropCreateDatabaseAlways
+		The DropCreateDatabaseAlways class deletes and creates a database irrespective of whether it is already present or not. 
+		This way, with every run of the application you will be deleting and re-creating the database. You will find this initializer 
+		useful during testing when you want to run the application with a fresh set of data.
+
+		You can also create your own database initializer by implementing the IDatabaseInitializer interface. You will develop a custom 
+		database initializer in the later sections.
+
+		Using Inbuilt Database Initializers
+
+		Now that you are aware of the inbuilt database initializers provided by Code First, let's see how to use them in your application.
+

@@ -1,0 +1,47 @@
+﻿body {
+  background-color: #ebdd91;
+}
+li.active {
+  background: #f8f6f4;
+}
+section {
+  clear: both;
+  margin-bottom: 20px;
+  overflow: auto;
+}
+.section-highlight {
+  background-color: #ff7b92;
+  height: 100%;
+  width: 100%;
+}
+.square {
+  color: white;
+  display: inline;
+  float: left;
+  height: 96px;
+  text-align: center;
+  width: 96px;
+  padding: 1em;
+}
+.colour1 {
+  background-color: #000000;
+}
+.colour2 {
+  background-color: #f8f6f4;
+}
+.colour3 {
+  background-color: #ebdd91;
+}
+.colour4 {
+  background-color: #b8d8b8;
+}
+.colour5 {
+  background-color: #b9c8e1;
+}
+.colour6 {
+  background-color: #d2d1d0;
+}
+.colour7 {
+  background-color: #9f9e9d;
+}
+/*# sourceMappingURL=Design.css.map */

@@ -1,0 +1,47 @@
+﻿@{
+    Layout = "~/Views/Templates/Design.cshtml";
+    ViewBag.Title += "Templates - Design System";
+}
+
+@section header {
+    <h3>Templates</h3>
+    <p>Templates are not a foreign concept to designers or developers. They exist to document the layout and structure of a section or the entirety of an interface. In Atomic Design, Templates are reserved for the layout of a whole page. In our system we expand on that role just a bit to help eliminate the need for the Organisms level of Atomic Design.</p>
+}
+
+@section body {
+    <div class="col-md-3">
+        <h3>Sections</h3>
+        <ul>
+            <li>
+                <a href="#html">HTML</a>
+            </li>
+            <li>
+                <a href="#master">Master</a>
+            </li>
+            <li>
+                <a href="#design">Design</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="col-md-9">
+        <ul>
+            <li>
+                <a id="html" href="/template-demos/html">HTML</a> 
+                <p>Minimal template which contains the html, head and body elements.</p>
+                <ul>
+                    <li>
+                        <a id="master" href="/template-demos/master">Master</a> 
+                        <p>App-branded template which contains all design styles, Google Tag Manager and the Master scripts.</p>
+                        <ul>
+                            <li>
+                                <a id="design" href="/template-demos/design">Design</a> 
+                                <p>Design System template which contains section navigation and 2 columns for anchors and content.</p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+}

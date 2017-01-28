@@ -1,0 +1,567 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1125BA18-563B-4B4B-98CE-335DB56CE96D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BaseProject.Web</RootNamespace>
+    <AssemblyName>BaseProject.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TypeScriptToolsVersion>1.8</TypeScriptToolsVersion>
+    <TypeScriptSourceMap>false</TypeScriptSourceMap>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>App_Data\XmlDocument.xml</DocumentationFile>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="dotless.Core">
+      <HintPath>..\packages\dotless.1.4.1.0\lib\dotless.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization.Less">
+      <HintPath>..\packages\System.Web.Optimization.Less.1.3.3\lib\net40\System.Web.Optimization.Less.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <!-- BaseProject -->
+    <TypeScriptCompile Include="Scripts\ThirdParty\angular-1.5\angular-animate.d.ts" />
+    <TypeScriptCompile Include="Scripts\ThirdParty\angular-1.3\angular-mocks.d.ts" />
+    <TypeScriptCompile Include="Scripts\ThirdParty\angular-1.3\angular-sanitize.d.ts" />
+    <TypeScriptCompile Include="Scripts\ThirdParty\angular-1.5\angular.d.ts" />
+    <TypeScriptCompile Include="Scripts\ThirdParty\google.maps.d.ts" />
+    <TypeScriptCompile Include="Scripts\ThirdParty\jasmine-2.5.2\index.d.ts" />
+    <TypeScriptCompile Include="Scripts\ThirdParty\jquery-1.10\jquery-1.10.d.ts" />
+    <!-- /BaseProject -->
+    <TypeScriptCompile Include="Scripts\Bootstraps\App.ts" />
+    <TypeScriptCompile Include="Scripts\Modules\Connectors\BaseProject.ts" />
+    <TypeScriptCompile Include="Scripts\Modules\Controllers\Info.ts" />
+    <TypeScriptCompile Include="Scripts\Modules\Directives\PhoneAdvert.ts" />
+    <TypeScriptCompile Include="Scripts\Tests\Info.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- BaseProject -->
+    <Compile Include="App_Start\StylesConfig.cs" />
+    <Compile Include="App_Start\ScriptsConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\HelpPage\ApiDescriptionExtensions.cs" />
+    <Compile Include="Areas\HelpPage\App_Start\HelpPageConfig.cs" />
+    <Compile Include="Areas\HelpPage\Controllers\HelpController.cs" />
+    <Compile Include="Areas\HelpPage\HelpPageAreaRegistration.cs" />
+    <Compile Include="Areas\HelpPage\HelpPageConfigurationExtensions.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\CollectionModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ComplexTypeModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\DictionaryModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\EnumTypeModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\EnumValueDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\IModelDocumentationProvider.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\KeyValuePairModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ModelDescriptionGenerator.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ModelNameAttribute.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ModelNameHelper.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ParameterAnnotation.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ParameterDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\SimpleTypeModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\Models\HelpPageApiModel.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\HelpPageSampleGenerator.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\HelpPageSampleKey.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\ImageSample.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\InvalidSample.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\ObjectGenerator.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
+    <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\DesignController.cs" />
+    <Compile Include="Controllers\ErrorsController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SharedController.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="DAL\DatabaseContext.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Models\SitemapItem.cs" />
+    <Compile Include="Services\SitemapService.cs" />
+    <Compile Include="Utilities\CacheControl.cs" />
+    <Compile Include="Utilities\HttpConfigurationExtensions.cs" />
+    <Compile Include="Utilities\ObjectExtensions.cs" />
+    <Compile Include="Utilities\StringExtensions.cs" />
+    <Compile Include="Utilities\Urls.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <!-- /BaseProject -->
+    <Compile Include="Controllers\API\PhonesController.cs" />
+    <Compile Include="Models\Phone.cs" />
+    <Compile Include="Services\PhoneService.cs" />
+    <Compile Include="ViewModels\PhoneAdvertViewModel.cs" />
+    <Compile Include="Migrations\201606081719069_InitialCreate.cs" />
+    <Compile Include="Migrations\201606081719069_InitialCreate.Designer.cs">
+      <DependentUpon>201606081719069_InitialCreate.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\XmlDocument.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Areas\HelpPage\HelpPage.css" />
+    <Content Include="Fonts\HelveticaHeavy\ae236757-b3b9-4cfa-906d-bce3e20a9397.svg" />
+    <Content Include="Fonts\HelveticaLight\helvetica-light-webfont.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Graphics\app-icon.png" />
+    <Content Include="Graphics\favicon.ico" />
+    <Content Include="Graphics\loader.svg" />
+    <Content Include="Scripts\ThirdParty\angular-1.5.2\angular-animate.js" />
+    <Content Include="Scripts\ThirdParty\angular-1.5.2\angular-loader.js" />
+    <Content Include="Scripts\ThirdParty\angular-1.5.2\angular-mocks.js" />
+    <Content Include="Scripts\ThirdParty\angular-1.5.2\angular-resource.js" />
+    <Content Include="Scripts\ThirdParty\angular-1.5.2\angular-route.js" />
+    <Content Include="Scripts\ThirdParty\angular-1.5.2\angular-sanitize.js" />
+    <Content Include="Scripts\ThirdParty\angular-1.5.2\angular.js" />
+    <Content Include="Scripts\ThirdParty\angular-timeago.js" />
+    <Content Include="Scripts\ThirdParty\bootstrap-3.3.2\bootstrap.js" />
+    <Content Include="Scripts\ThirdParty\jasmine-2.5.2\boot.js" />
+    <Content Include="Scripts\ThirdParty\jasmine-2.5.2\console.js" />
+    <Content Include="Scripts\ThirdParty\jasmine-2.5.2\jasmine-html.js" />
+    <Content Include="Scripts\ThirdParty\jasmine-2.5.2\jasmine.css" />
+    <Content Include="Scripts\ThirdParty\jasmine-2.5.2\jasmine.js" />
+    <Content Include="Scripts\ThirdParty\jasmine-2.5.2\jasmine_favicon.png" />
+    <Content Include="Scripts\ThirdParty\jquery-1.10\jquery-1.10.2.js" />
+    <Content Include="Scripts\ThirdParty\poor-mans-error-logger.js" />
+    <Content Include="Styles\Components\PhoneAdvert.css">
+      <DependentUpon>PhoneAdvert.less</DependentUpon>
+    </Content>
+    <Content Include="Styles\Components\PhoneAdvert.min.css">
+      <DependentUpon>PhoneAdvert.css</DependentUpon>
+    </Content>
+    <Content Include="Styles\Modules\Variables.css">
+      <DependentUpon>Variables.less</DependentUpon>
+    </Content>
+    <Content Include="Styles\Templates\Design.css">
+      <DependentUpon>Design.less</DependentUpon>
+    </Content>
+    <Content Include="Styles\Templates\Design.min.css">
+      <DependentUpon>Design.css</DependentUpon>
+    </Content>
+    <Content Include="Styles\Templates\Master.css">
+      <DependentUpon>Master.less</DependentUpon>
+    </Content>
+    <Content Include="Styles\Templates\Master.min.css">
+      <DependentUpon>Master.css</DependentUpon>
+    </Content>
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\bootstrap.css">
+      <DependentUpon>bootstrap.less</DependentUpon>
+    </Content>
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\Home\Info.cshtml" />
+    <Content Include="Views\Templates\HTML.cshtml" />
+    <Content Include="Views\Templates\Master.cshtml">
+      <DependentUpon>HTML.cshtml</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <!-- BaseProject -->
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\alerts.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\badges.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\bootstrap.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\breadcrumbs.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\button-groups.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\buttons.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\carousel.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\close.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\code.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\component-animations.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\dropdowns.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\forms.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\glyphicons.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\grid.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\input-groups.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\jumbotron.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\labels.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\list-group.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\media.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\mixins.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\mixins\alerts.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\mixins\background-variant.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\mixins\border-radius.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\mixins\buttons.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\mixins\center-block.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\mixins\clearfix.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\mixins\forms.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\mixins\gradients.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\mixins\grid-framework.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\mixins\grid.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\mixins\hide-text.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\mixins\image.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\mixins\labels.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\mixins\list-group.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\mixins\nav-divider.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\mixins\nav-vertical-align.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\mixins\opacity.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\mixins\pagination.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\mixins\panels.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\mixins\progress-bar.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\mixins\reset-filter.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\mixins\resize.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\mixins\responsive-visibility.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\mixins\size.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\mixins\tab-focus.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\mixins\table-row.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\mixins\text-emphasis.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\mixins\text-overflow.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\mixins\vendor-prefixes.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\modals.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\navbar.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\navs.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\normalize.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\pager.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\pagination.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\panels.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\popovers.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\print.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\progress-bars.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\responsive-embed.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\responsive-utilities.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\scaffolding.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\tables.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\theme.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\thumbnails.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\tooltip.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\type.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\utilities.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\variables.less" />
+    <Content Include="Styles\ThirdParty\bootstrap-3.3.1\wells.less" />
+    <!-- /BaseProject -->
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Tests.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Fonts\HelveticaHeavy\0041ab1b-3cca-4f61-841a-75a18048adb8.eot" />
+    <Content Include="Fonts\HelveticaHeavy\03a07450-478d-4c93-89ae-68cafdbc0332.woff" />
+    <Content Include="Fonts\HelveticaHeavy\b96bc8f7-2a71-4500-8c8d-646fc0a13306.ttf" />
+    <Content Include="Fonts\HelveticaLight\helvetica-light-webfont.eot" />
+    <Content Include="Fonts\HelveticaLight\helvetica-light-webfont.ttf" />
+    <Content Include="Fonts\HelveticaLight\helvetica-light-webfont.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\SitemapXml.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Robots.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Sitemap.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Styles\Templates\Design.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Styles\Templates\Master.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Styles\Modules\Variables.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Errors\PageNotFound.cshtml" />
+    <Content Include="Views\Errors\ServerError.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Styles\Modules\Fonts.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\HelpPage\Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\HelpPage\Views\Shared\_Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\HelpPage\Views\Help\ResourceModel.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\HelpPage\Views\Help\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\TextSample.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\SimpleTypeModelDescription.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\Samples.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\Parameters.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ModelDescriptionLink.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\KeyValuePairModelDescription.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\InvalidSample.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ImageSample.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\HelpPageApiModel.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\EnumTypeModelDescription.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\DictionaryModelDescription.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ComplexTypeModelDescription.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\HelpPage\Views\_ViewStart.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BaseProject.Mail\BaseProject.Modules.Mail.csproj">
+      <Project>{c76aeb82-982c-44ab-a95f-43afee813526}</Project>
+      <Name>BaseProject.Modules.Mail</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201606081719069_InitialCreate.resx">
+      <DependentUpon>201606081719069_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\PhoneAdvert.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Styles\Components\PhoneAdvert.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Design\Features.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Design\Applications.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Design\Templates.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Design\Components.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Design\Basics.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Design\Principles.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Templates\Design.cshtml">
+      <DependentUpon>Master.cshtml</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\TemplateDemos\Design.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\TemplateDemos\Master.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\TemplateDemos\Html.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Development.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\GoogleTagManagerBody.cshtml" />
+    <Content Include="Views\Shared\GoogleTagManagerHead.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Styles\Components\PhoneAdvert.css.map">
+      <DependentUpon>PhoneAdvert.css</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Styles\Templates\Design.css.map">
+      <DependentUpon>Design.css</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Styles\Templates\Master.css.map">
+      <DependentUpon>Master.css</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50528</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

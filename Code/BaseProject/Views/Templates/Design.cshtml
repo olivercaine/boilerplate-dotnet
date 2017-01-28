@@ -1,0 +1,49 @@
+﻿@{
+    Layout = "~/Views/Templates/Master.cshtml";
+}
+
+@section body {
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <h1><a href="/" target="_self">@ConfigurationManager.AppSettings["AppName"]</a></h1>
+                <h2>Design System</h2>
+                <p>"Everything that makes up your product"</p>
+                <ul class="nav navbar-nav">
+                    <li @Urls.ActiveClassIfCurrent("applications")>
+                        @Html.ActionLink("Applications", "applications", "design")
+                    </li>
+                    <li @Urls.ActiveClassIfCurrent("principles")>
+                        @Html.ActionLink("Principles", "principles", "design")
+                    </li>
+                    <li @Urls.ActiveClassIfCurrent("basics")>
+                        @Html.ActionLink("Basics", "basics", "design")
+                    </li>
+                    <li @Urls.ActiveClassIfCurrent("components")>
+                        @Html.ActionLink("Components", "components", "design")
+                    </li>
+                    <li @Urls.ActiveClassIfCurrent("features")>
+                        @Html.ActionLink("Features", "features", "design")
+                    </li>
+                    <li @Urls.ActiveClassIfCurrent("templates")>
+                        @Html.ActionLink("Templates", "templates", "design")
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                @RenderSection("header", false)
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                @RenderSection("body", false)
+            </div>
+        </div>
+    </div>
+}
+
+@section scripts {
+    @RenderSection("scripts", false)
+}

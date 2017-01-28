@@ -1,0 +1,47 @@
+﻿@{
+    Layout = "/Views/Templates/Master.cshtml";
+    ViewBag.Title = "Info";
+    ViewBag.Description = "Lists the project's technical stack and useful pages";
+}
+
+@section body {
+    <div ng-controller="infoController">
+        <h1>
+            <a href="/" target="_self">@ConfigurationManager.AppSettings["AppName"]</a>
+        </h1>
+        <h2>Info</h2>
+
+        <h3>Frontend Tech</h3>
+        <ul>
+            <li><a href="http://www.dotlesscss.org/" target="_blank">Dotless 1.4.1</a> for compiling <a href="http://lesscss.org/" target="_blank">Less</a> into CSS</li>
+            <li><a href="http://getbootstrap.com/css/" target="_blank">Bootstrap 3.3.1</a> for responsive layout and components</li>
+            <li><a href="https://angularjs.org/" target="_blank">Angular 1.5.2</a> for MV* architecture</li>
+            <li><a href="http://www.typescriptlang.org/" target="_blank">TypeScript 1.5</a> for writing typed JavaScript</li>
+            <li><a href="http://jasmine.github.io/2.5/introduction.html" target="_blank">Jasmine 2.5.2</a> for JavaScript <a href="/tests">unit tests</a></li>
+        </ul>
+
+        <h3>Backend Tech</h3>
+        <ul>
+            <li><a href="https://www.microsoft.com/en-gb/download/details.aspx?id=30653.NET" target="_blank">.NET 4.5 framework</a> for business logic</li>
+            <li><a href="http://www.asp.net/mvc/overview/releases/mvc51-release-notes" target="_blank">.NET MVC 5.1</a> for the web application framework</li>
+            <li><a href="http://www.asp.net/web-pages" target="_blank">Razor 2.6.3</a> for rendering views</li>
+            <li><a href="http://www.asp.net/web-api/overview/releases/whats-new-in-aspnet-web-api-22" target="_blank">.NET Web API 2.2</a> for the API layer</li>
+            <li><a href="http://www.asp.net/mvc/overview/getting-started/getting-started-with-ef-using-mvc/migrations-and-deployment-with-the-entity-framework-in-an-asp-net-mvc-application" target="_blank">.NET Entity Framework 6</a> for database creation and migrations</li>
+            <li><a href="http://www.nunit.org/index.php?p=docHome&r=2.6.3" target="_blank">NUnit 2.6.3</a> for unit testing C# code</li>
+        </ul>
+
+        <h3>Pages</h3>
+        <ul>
+            <li><a href="/design">/design</a> for viewing the site's Design System</li>
+            <li><a href="/development">/development</a> for viewing the development standards</li>
+            <li><a href="/help">/help</a> for the API reference</li>
+            <li><a href="/sitemap">/sitemap</a> and <a href="/sitemapxml">/sitemapxml</a> contain a list of indexable pages</li>
+            <li><a href="/errors/page-not-found">/errors/page-not-found</a> and <a href="/errors/server-error">/errors/server-error</a> are default error pages</li>
+            <li><a href="/robots.txt">/robots.txt</a> contains search engine rules</li>
+        </ul>
+    </div>
+}
+
+@section scripts {
+    <script src="/Scripts/Bootstraps/App.js"></script>
+}

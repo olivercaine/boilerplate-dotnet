@@ -1,0 +1,106 @@
+﻿@{
+    Layout = "~/Views/Templates/Design.cshtml";
+    ViewBag.Title += "Basics - Design System";
+}
+
+@section header {
+    <h3>Basics</h3>
+    <p>Basics, known as Atoms in Atomic Design, contain the design patterns that fall on the simple side of the spectrum. User interface controls that have a standard html tag are the most obvious form of Basics. Buttons, check boxes, and links are examples of the design patterns one would find at this level. Borrowing from Atomic Design, Basics are the smallest structures of a user interface. They can not be broken down any further. The Basics level is almost identical to the Atoms level in Atomic Design, except that we decided to exclude design patterns that document more theoretical constructs and place them into a lower level called Principles.</p>
+}
+
+@section body {
+    <div class="col-md-3">
+        <h3>Sections</h3>
+        <ul>
+            <li>
+                <a href="#colour-scheme">Colour Scheme</a>
+            </li>
+            <li>
+                <a href="#headings">Headings</a>
+            </li>
+            <li>
+                <a href="#copy">Copy</a>
+            </li>
+            <li>
+                <a href="#typography">Typography</a>
+            </li>
+            <li>
+                <a href="#links-and-buttons">Links &amp; Buttons</a>
+            </li>
+            <li>
+                <a href="#graphics">Graphics</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="col-md-9">
+        <section id="colour-scheme">
+            <h4>Colour Scheme</h4>
+            @for (var i = 1; i <= 7; i++)
+            {
+                <div class="square colour@(i)">
+                    @@colour@(i)
+                </div>
+            }
+        </section>
+
+        <section id="headings">
+            <h4>Headings</h4>
+            <h1>H1</h1>
+            <h2>H2</h2>
+            <h3>H3</h3>
+            <h4>H4</h4>
+        </section>
+
+        <section id="copy">
+            <h4>Copy</h4>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            </p>
+            <p class="emphasized">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea <a href="#">commodo</a>.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse
+            </p>
+        </section>
+
+        <section id="typography">
+            <h4>Typography</h4>
+            <p style="font-family: 'HelveticaLight'">HelveticaLight</p>
+            <p style="font-family: 'HelveticaHeavy'">HelveticaHeavy</p>
+        </section>
+
+        <section id="links-and-buttons">
+            <h4>Links &amp; Buttons</h4>
+
+            <h5>Standard anchor</h5>
+            <a class="btn" href="#">Standard anchor</a>
+
+            <h5>Standard anchor button</h5>
+            <a class="btn btn-default" href="#">Standard anchor button</a>
+
+            <h5>Standard button</h5>
+            <button class="btn btn-default" type="submit">Standard button</button>
+
+            <h5>Standard CTA button</h5>
+            <button class="btn btn-cta">Button</button>
+        </section>
+
+        <section id="graphics">
+            <h4>Graphics</h4>
+
+            <h5>Loader</h5>
+            <img alt="Loader" src="/Graphics/loader.svg" />
+
+            <h5>App Icon</h5>
+            <img alt="App Icon" src="/Graphics/app-icon.png" />
+
+            <h5>Favicon</h5>
+            <img alt="Loader" src="/Graphics/favicon.ico" />
+        </section>
+    </div>
+}

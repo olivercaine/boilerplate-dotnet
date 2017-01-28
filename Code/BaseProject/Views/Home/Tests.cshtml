@@ -1,0 +1,13 @@
+﻿@{
+    Layout = "/Views/Templates/HTML.cshtml";
+    ViewBag.Title = "Tests";
+}
+
+@section head {
+    <link href="/Scripts/ThirdParty/jasmine-2.5.2/jasmine.css" rel="stylesheet">
+}
+
+@section body {
+    <!-- testing libs and tests -->
+    @Scripts.Render(ScriptsConfig.TestScripts)
+}
