@@ -9,6 +9,6 @@ var Connectors;
             this.$http.get(this.apiUrl + "/phones/getall").then(successCallback, errorCallback, finallyCallback);
         };
         return BaseProject;
-    }());
+    })();
     Connectors.BaseProject = BaseProject;
 })(Connectors || (Connectors = {}));

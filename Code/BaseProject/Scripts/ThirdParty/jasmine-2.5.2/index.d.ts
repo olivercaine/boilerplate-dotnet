@@ -245,7 +245,7 @@ declare namespace jasmine {
     }
 
     namespace errors {
-        class ExpectationFailed extends Error {
+        class ExpectationFailed {
             constructor();
             stack: any;
         }
